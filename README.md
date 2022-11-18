@@ -61,7 +61,9 @@
         Header :
 
         ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+        {
+        	"authorization": "Bearer {{TOKEN_JWT}}"
+        }
         ```
 
         Response :
@@ -82,7 +84,9 @@
             Header :
 
             ```json
-                header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response:
@@ -112,7 +116,9 @@
             Header :
 
             ```json
-                header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response:
@@ -141,7 +147,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response:
@@ -172,7 +180,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response:
@@ -202,7 +212,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Body :
@@ -247,7 +259,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Body :
@@ -292,7 +306,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response :
@@ -323,7 +339,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response :
@@ -377,7 +395,9 @@
         Header :
 
         ```json
-        header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+        {
+        	"authorization": "Bearer {{TOKEN_JWT}}"
+        }
         ```
 
         Response :
@@ -398,7 +418,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Body :
@@ -438,7 +460,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Body :
@@ -477,7 +501,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response:
@@ -507,7 +533,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response:
@@ -535,7 +563,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response:
@@ -556,7 +586,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Body :
@@ -598,7 +630,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Body :
@@ -639,7 +673,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response:
@@ -670,7 +706,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response:
@@ -699,7 +737,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response:
@@ -720,7 +760,9 @@
             Header :
 
             ```json
-            header: { "authorization": "Bearer {{TOKEN_JWT}}" }
+            {
+            	"authorization": "Bearer {{TOKEN_JWT}}"
+            }
             ```
 
             Response :
