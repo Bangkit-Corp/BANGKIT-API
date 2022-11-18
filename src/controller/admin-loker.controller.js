@@ -6,10 +6,7 @@ export default class LokerAdmin {
   
   async getAllLoker(req, res, next) {
     try {
-      const loker = await Loker.find().populate("user", "email")
-      // populate('author', 'name'). 
-      // user nama fieldnya
-      // only return the Persons name
+      const loker = await Loker.find().populate("user", "email")      
       if (loker) {
         return res.status(200).send({
           status: res.statusCode,
@@ -39,9 +36,7 @@ export default class LokerAdmin {
           message: `Success Get Data Loker`,
           data: loker
         });        
-      } else {
-        // Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
-        // tes >> 637653a2ec1b3ed5242c9a9b
+      } else {        
         return res.status(404).send({
           status: res.statusCode,
           message: `Data Loker Tidak Ditemukan`,

@@ -21,10 +21,7 @@ const lokerSchema = new Schema({
     user: {
         type: mongoose.ObjectId,
         required: true,
-        ref: "admin"
-        // mongoose.model(name, schema)
-        // pake name ini
-        // const Admins = mongoose.model("admin", AdminsSchema);
+        ref: "admin"        
     }
 });
 
