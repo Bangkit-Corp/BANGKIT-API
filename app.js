@@ -6,6 +6,8 @@ import morgan from "morgan";
 import Mongo from "./src/config/db.connect.js";
 import userRouter from "./src/router/user.router.js";
 import adminRouter from "./src/router/admin-auth.router.js";
+import adminLaporanRouter from "./src/router/admin-laporan.router.js";
+import userLaporanRouter from "./src/router/user-laporan.router.js";
 import { Redis } from "./src/config/redis.connect.js";
 import passp from "./src/middleware/passport.middleware.js";
 
@@ -27,6 +29,9 @@ app.get("/", (req, res) => {
 
 app.use("/api/user/auth", userRouter);
 app.use("/api/admin/auth", adminRouter);
+app.use("/api/admin/laporan", passport.authenticate("jwt-admin", { session: false }), adminLaporanRouter);
+app.use("/api/user/laporan", passport.authenticate("jwt-user", { session: false }), userLaporanRouter);
+
 
 /* TEST AUTH USER */
 app.get("/secret/user", passport.authenticate("jwt-user", { session: false }), (req, res, next) => {
