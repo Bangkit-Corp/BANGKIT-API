@@ -50,12 +50,13 @@ export default class LaporanAdmin {
   
   async addLaporan(req, res, next) {
     try {
-      const { name, desc, contact, kuota, image, user } = req.body;
-      if (!name || !desc || !contact || !kuota || !image || !user) {
+      const { name, desc, contact, kuota, image } = req.body;
+      if (!name || !desc || !contact || !kuota || !image ) {
                 return res.status(400).send({ status: res.statusCode, message: `Bad Request! Input Body!` });
             }      
       
-      const data = { name, desc, contact, image, user }
+
+      const data = { name, desc, contact, image, user: req.user }
       const laporan = new Laporan(data)
       laporan.save()
 

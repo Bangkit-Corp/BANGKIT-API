@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const laporanSchema = new Schema({
-    name: {
+    title: {
         type: String,
         required: true,
     },
@@ -10,22 +10,13 @@ const laporanSchema = new Schema({
         type: String,
         required: true,
     },
-    contact: {
-        type: String,
-        required: true,
-    },
-    kuota: {
-        type: Number,
-        required: true,
-    },
-    image: {
+    status: {
         type: String,
         required: true,
     },
     user: {
-        type: mongoose.ObjectId,
-        required: true,
-        ref: "admin"        
+        type: Object,
+        required: true,        
     }
 });
 
@@ -33,3 +24,12 @@ const Laporan = mongoose.model("Laporan", laporanSchema);
 export default Laporan;
 
 
+```
+"_id" : "ObjectId, unique",
+    "title" : "string",
+    "desc" : "string",
+    "status" : "int",
+    "user" : {
+      "name" : "String",
+      "contact" : "String",
+```
