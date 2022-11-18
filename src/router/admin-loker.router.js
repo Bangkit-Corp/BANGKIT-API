@@ -1,5 +1,5 @@
 import express from "express";
-import LokerController from "../controller/loker.controller.js";
+import LokerController from "../controller/admin-loker.controller.js";
 
 const router = express.Router();
 const controller = new LokerController();

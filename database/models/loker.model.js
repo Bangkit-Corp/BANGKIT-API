@@ -2,12 +2,25 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const lokerSchema = new Schema({
-    name: String,
-    desc: String,
-    contact: String,
-    image: String,
+    name: {
+        type: String,
+        required: true,
+    },
+    desc: {
+        type: String,
+        required: true,
+    },
+    contact: {
+        type: String,
+        required: true,
+    },
+    image: {
+        type: String,
+        required: true,
+    },
     user: {
         type: mongoose.ObjectId,
+        required: true,
         ref: "admin"
         // mongoose.model(name, schema)
         // pake name ini

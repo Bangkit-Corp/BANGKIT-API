@@ -55,7 +55,12 @@ export default class LokerAdmin {
 
   async addLoker(req, res, next) {
     try {
-      const data = req.body
+      const { name, desc, contact, image, user } = req.body;
+      if (!name || !desc || !contact || !image || !user) {
+				return res.status(400).send({ status: res.statusCode, message: `Bad Request! Input Body!` });
+			}      
+      
+      const data = { name, desc, contact, image, user }
       const loker = new Loker(data)
       loker.save()
 
@@ -73,11 +78,18 @@ export default class LokerAdmin {
     try {    
       const params = req.params;      
       const loker = await Loker.findOneAndDelete({ _id: mongoose.Types.ObjectId(params)});
-      
-      return res.status(202).send({
-        status: res.statusCode,
-        message: `Success Delete Loker`,
-      });        
+
+      if (loker) {
+        return res.status(202).send({
+          status: res.statusCode,
+          message: `Success Delete Loker`,
+        });        
+      } else {
+        return res.status(404).send({
+          status: res.statusCode,
+          message: `Data Loker Tidak Ditemukan`,
+        });
+      }          
     } catch (error) {
       console.log(error);
 			return res.status(500).send({ status: res.statusCode, message: `Internal Server Error` });
@@ -106,8 +118,6 @@ export default class LokerAdmin {
           new_data: loker,
         });        
       } else {
-        // Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
-        // tes >> 637653a2ec1b3ed5242c9a9b
         return res.status(404).send({
           status: res.statusCode,
           message: `Data Loker Tidak Ditemukan`,
