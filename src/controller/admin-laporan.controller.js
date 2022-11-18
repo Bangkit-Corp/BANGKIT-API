@@ -1,6 +1,6 @@
 import Laporan from "../../database/models/laporan.model.js";
 import mongoose from "mongoose";
-import Laporan from "../../database/models/laporan.model.js";
+
 
 export default class LaporanAdmin {
     constructor() {}
@@ -110,7 +110,7 @@ export default class LaporanAdmin {
           if (laporan) {
             return res.status(200).send({
               status: res.statusCode,
-              message: `Success Get Data Laporan`,
+              message: `Success Update Laporan`,
               old_data: laporanOld,
               new_data: laporan,
             });        

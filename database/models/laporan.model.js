@@ -33,10 +33,3 @@ const Laporan = mongoose.model("Laporan", laporanSchema);
 export default Laporan;
 
 
-```
-         "name" : "string",
-         "desc" : "string",
-         "contact" : "string",
-         "kuota" : "integer",
-         "image" : "string"
-```
