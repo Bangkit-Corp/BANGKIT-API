@@ -6,7 +6,7 @@ export default class LaporanAdmin {
 
 	async getAllLaporan(req, res, next) {
 		try {
-			const laporan = await Laporan.find().populate("user", "email");
+			const laporan = await Laporan.find();
 			if (laporan) {
 				return res.status(200).send({
 					status: res.statusCode,
@@ -49,18 +49,18 @@ export default class LaporanAdmin {
 
 	async addLaporan(req, res, next) {
 		try {
-			const { name, desc, contact, kuota, image } = req.body;
-			if (!name || !desc || !contact || !kuota || !image) {
+			const { title, desc, contact, status } = req.body;
+			if (!title || !desc || !contact || !status) {
 				return res.status(400).send({ status: res.statusCode, message: `Bad Request! Input Body!` });
 			}
 
-			const data = { name, desc, contact, image, user: req.user };
-			const laporan = new Laporan(data);
-			laporan.save();
+			const data = { title, desc, contact, status, user: { email: req.user.email, contact: req.user.contact } };
+			const laporan = await Laporan.create(data);
 
 			return res.status(200).send({
 				status: res.statusCode,
 				message: `Laporan Successfully Created`,
+				data: laporan,
 			});
 		} catch (error) {
 			console.log(error);

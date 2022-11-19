@@ -81,7 +81,6 @@ export default function (passport) {
 				const inBlackList = await client.get(`jwt_bl_${token}`);
 				return Users.findOne({ _id: jwtPayload._id })
 					.then(async (user) => {
-						console.log(user);
 						if (!user) {
 							return cb(null, false);
 						}
