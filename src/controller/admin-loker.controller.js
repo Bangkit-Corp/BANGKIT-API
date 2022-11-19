@@ -50,18 +50,17 @@ export default class LokerAdmin {
 
 	async addLoker(req, res, next) {
 		try {
-			const { name, desc, contact, image, user } = req.body;
-			if (!name || !desc || !contact || !image || !user) {
+			const { name, desc, contact, image } = req.body;
+			if (!name || !desc || !contact || !image) {
 				return res.status(400).send({ status: res.statusCode, message: `Bad Request! Input Body!` });
 			}
 
-			const data = { name, desc, contact, image, user };
-			const loker = new Loker(data);
-			loker.save();
-
+			const data = { name, desc, contact, image, user: req.user._id };
+			const loker = await Loker.create(data);
 			return res.status(200).send({
 				status: res.statusCode,
 				message: `Success Create Loker`,
+				data: loker,
 			});
 		} catch (error) {
 			console.log(error);
