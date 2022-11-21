@@ -5,6 +5,7 @@
     -   **Login User**
         Method : POST
         Endpoint : `/api/user/auth/login`
+        
         Body :
 
         ```JSON
@@ -28,6 +29,7 @@
 
         Method : POST
         Endpoint : `/api/user/auth/register`
+        
         Body :
 
         ```json
@@ -58,6 +60,7 @@
 
         Method : GET
         Endpoint : `/api/user/auth/logout`
+        
         Header :
 
         ```json
@@ -81,6 +84,7 @@
 
             Method: GET
             Endpoint : `/api/user/loker`
+            
             Header :
 
             ```json
@@ -113,6 +117,7 @@
 
             Method: GET
             Endpoint : `/api/user/loker/:_id`
+            
             Header :
 
             ```json
@@ -144,6 +149,7 @@
         -   **Read All Beasiswa**
             Method: GET
             Endpoint : `/api/user/beasiswa`
+            
             Header :
 
             ```json
@@ -177,6 +183,7 @@
 
             Method: GET
             Endpoint : `/api/user/beasiswa/:_id`
+            
             Header :
 
             ```json
@@ -209,6 +216,7 @@
         -   **Create Laporan**
             Method: POST
             Endpoint : `/api/user/lapor`
+            
             Header :
 
             ```json
@@ -336,6 +344,7 @@
 
             Method: GET
             Endpoint : `/api/user/lapor/:_id`
+            
             Header :
 
             ```json
@@ -392,6 +401,7 @@
 
         Method : GET
         Endpoint : `/api/user/auth/logout`
+        
         Header :
 
         ```json
@@ -415,6 +425,7 @@
 
             Method : POST
             Endpoint : `/api/admin/loker`
+            
             Header :
 
             ```json
@@ -457,6 +468,7 @@
 
             Method : PUT
             Endpoint : `/api/admin/loker/:_id`
+            
             Header :
 
             ```json
@@ -498,6 +510,7 @@
 
             Method: GET
             Endpoint : `/api/admin/loker`
+            
             Header :
 
             ```json
@@ -530,6 +543,7 @@
 
             Method: GET
             Endpoint : `/api/admin/loker/:_id`
+            
             Header :
 
             ```json
@@ -560,6 +574,7 @@
 
             Method : DELETE
             Endpoint : `/api/admin/loker/:_id`
+            
             Header :
 
             ```json
@@ -583,6 +598,7 @@
 
             Method : POST
             Endpoint : `/api/admin/beasiswa`
+            
             Header :
 
             ```json
@@ -627,6 +643,7 @@
 
             Method : PUT
             Endpoint : `/api/admin/beasiswa/:_id`
+            
             Header :
 
             ```json
@@ -670,6 +687,7 @@
 
             Method: GET
             Endpoint : `/api/admin/beasiswa`
+            
             Header :
 
             ```json
@@ -703,6 +721,7 @@
 
             Method: GET
             Endpoint : `/api/admin/beasiswa/:_id`
+            
             Header :
 
             ```json
@@ -734,6 +753,7 @@
 
             Method : DELETE
             Endpoint : `/api/admin/beasiswa/:_id`
+            
             Header :
 
             ```json
@@ -757,6 +777,7 @@
 
             Method: GET
             Endpoint : `/api/admin/lapor`
+            
             Header :
 
             ```json
@@ -795,6 +816,7 @@
 
             Method: GET
             Endpoint : `/api/admin/lapor/:_id`
+            
             Response :
 
             ```json
@@ -813,3 +835,7 @@
             	}
             }
             ```
+
+# Dokumentasi API POSTMAN
+
+URL : https://documenter.getpostman.com/view/16528402/2s8YmSsLsR
